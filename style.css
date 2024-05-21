@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  section {
+    border: 1px solid red
+    }
+  
+  body {
+    display: grid;
+    grid-template-columns: 20vw 40vw 40vw;
+    
+    }
+  
+  #sidebar {
+    }
