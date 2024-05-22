@@ -1,16 +1,69 @@
 html {
     height: 100%;
     width: 100%;
+    background-color: rgb(27,27,36);
   }
-  section {
-    border: 1px solid red
+
+  * {
+    margin: 0;
+  }
+
+section {
+    border: 1px solid red;
+    color: white;
     }
   
-  body {
+body {
     display: grid;
-    grid-template-columns: 20vw 40vw 40vw;
-    
+    grid-template-columns: 25vw 36.5vw 36.5vw;
+    grid-template-areas: "sidebar about about"
+                         "sidebar projects projects"
+                         "sidebar education education"
+                         "sidebar references references";
+    height: 175vh;
+    padding-bottom: 20px;
+    padding-left: 10px;
     }
   
-  #sidebar {
+#sidebar {
+    grid-area: sidebar;
+    display: grid;
+    justify-content: center;
     }
+    
+#sidebar > * {
+    border: 1px solid red;
+}  
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    gap: 2vh;
+    padding-top: 2vh;
+}
+
+#title > img {
+    height: 13.72vh;
+    width: 6.51vw;
+    border-radius: 50%;
+}
+
+#about {
+    grid-area: about;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#education {
+    grid-area: education;
+}
+
+#references {
+    grid-area: references;
+}
+
+ 
