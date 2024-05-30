@@ -3,67 +3,125 @@ html {
     width: 100%;
     background-color: rgb(27,27,36);
   }
-
+  
   * {
     margin: 0;
   }
-
-section {
+  
+  section {
     border: 1px solid red;
     color: white;
     }
   
-body {
+  body {
     display: grid;
-    grid-template-columns: 25vw 36.5vw 36.5vw;
+    grid-template-columns: 20vw 38.5vw 38.5vw;
     grid-template-areas: "sidebar about about"
                          "sidebar projects projects"
-                         "sidebar education education"
+                         "sidebar projects projects"
                          "sidebar references references";
-    height: 175vh;
-    padding-bottom: 20px;
-    padding-left: 10px;
+    height: 97vh;
+    width: 97vw;
+    margin: 2vh 1vw;
     }
   
-#sidebar {
+  #sidebar {
     grid-area: sidebar;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 97vh;
+    width: 18vw;
+    position: fixed;
     }
-    
-#sidebar > * {
+  
+  #sidebar > * {
     border: 1px solid red;
-}  
-
-#title {
+  }  
+  
+  #title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20vw;
-    gap: 2vh;
+    height: 225px;
+    gap: 1.5vh;
     padding-top: 2vh;
-}
-
-#title > img {
-    height: 13.72vh;
-    width: 6.51vw;
+    background-color: rgb(37,37,49);
+  }
+  
+  #title > img {
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
-}
+  }
+  
+  #location {
+    height: 75px;
+    display: grid;
+    grid-template-columns: 8vw 8vw;
+    grid-template-rows: 2.5vh 2.5vh 2.5vh;
+    align-items: center;
+    margin:  .5vh .5vw;
+    padding-left: .5vw;
+  }
+  
+  
+  .q {
+    text-align: start;
+  }
+  
+  .a {
+    text-align: end;
+  }
+  
+  #skills > ul {
+    display: flex;
+    align-items: center;
+    padding: 0%;
+    list-style: none;
+    gap: 1vw;
+    margin: 2vh 0;
+    padding-left: 1vw;
+  }
 
-#about {
+  #additional {
+    height: 20vh;
+  }
+  
+  #additional > ul {
+    list-style-image: url(custom-dot.svg);
+    padding-left: 7rem;
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px
+  }
+
+  #additional > ul > li {
+    font-size: large;
+  }
+
+  #education {
+    height: 25vh
+  }
+  
+  
+  
+  #about {
     grid-area: about;
-}
-
-#projects {
+  }
+  
+  #projects {
     grid-area: projects;
-}
-
-#education {
+  }
+  
+  #education {
     grid-area: education;
-}
-
-#references {
+  }
+  
+  #references {
     grid-area: references;
-}
-
- 
+  }
+  
+  
