@@ -1,127 +1,102 @@
+@font-face {
+  font-family: 'Lulo Clean';
+  src: url('fonts/@font-face/39a2c7f346d5cfae7045aeb2fb50d9ad.woff2') format('woff2'),
+       url('fonts/@font-face/39a2c7f346d5cfae7045aeb2fb50d9ad.woff') format('woff'),
+       url('fonts/@font-face/39a2c7f346d5cfae7045aeb2fb50d9ad.ttf') format('truetype');
+}
+
 html {
     height: 100%;
     width: 100%;
     background-color: rgb(27,27,36);
+    font-family: Lulo Clean, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
   }
   
-  * {
+  *, *::before, *::after {
+    box-sizing: inherit;
     margin: 0;
-  }
-  
-  section {
-    border: 1px solid red;
-    color: white;
-    }
-  
-  body {
-    display: grid;
-    grid-template-columns: 20vw 38.5vw 38.5vw;
-    grid-template-areas: "sidebar about about"
-                         "sidebar projects projects"
-                         "sidebar projects projects"
-                         "sidebar references references";
-    height: 97vh;
-    width: 97vw;
-    margin: 2vh 1vw;
-    }
-  
-  #sidebar {
-    grid-area: sidebar;
-    display: flex;
-    flex-direction: column;
     padding: 0;
-    height: 97vh;
-    width: 18vw;
-    position: fixed;
-    }
-  
-  #sidebar > * {
-    border: 1px solid red;
-  }  
-  
-  #title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 225px;
-    gap: 1.5vh;
-    padding-top: 2vh;
-    background-color: rgb(37,37,49);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+#welcome {
+    background-image: url(logos/download.png);
+    background-position: left;
+    background-size: cover;
+    height: 60vh;
+    padding-top: 15%;
+    padding-left: 35%;
   }
   
-  #title > img {
-    height: 100px;
-    width: 100px;
+#welcome > h1 { 
+    color: burlywood;
+  }
+
+#welcome > h1:first-child {
+    font-size: 125px;
+  }
+
+
+
+#profile {
+  height: 30px;
+  background-color: white;
+  position: relative;
+}
+
+#profile > img {
+    width: 530px;
+    height: 540px;
     border-radius: 50%;
+    border: 20px solid white;
+    position: absolute;
+    bottom: -270px;
+    left: 70px;
   }
   
-  #location {
-    height: 75px;
-    display: grid;
-    grid-template-columns: 8vw 8vw;
-    grid-template-rows: 2.5vh 2.5vh 2.5vh;
-    align-items: center;
-    margin:  .5vh .5vw;
-    padding-left: .5vw;
-  }
-  
-  
-  .q {
-    text-align: start;
-  }
-  
-  .a {
-    text-align: end;
-  }
-  
-  #skills > ul {
-    display: flex;
-    align-items: center;
-    padding: 0%;
-    list-style: none;
-    gap: 1vw;
-    margin: 2vh 0;
-    padding-left: 1vw;
+#about {
+    padding-top: 30px;
+    background-color: rgb(34,32,43);
+    color: burlywood;
+
   }
 
-  #additional {
-    height: 20vh;
-  }
-  
-  #additional > ul {
-    list-style-image: url(custom-dot.svg);
-    padding-left: 7rem;
-    padding-top: 1.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px
-  }
 
-  #additional > ul > li {
-    font-size: large;
-  }
+#about > p {
+  padding-top: 21%;
+  padding-left: 12%;
+  padding-bottom: 10%;
+  font-size: x-large;
+}
 
-  #education {
-    height: 25vh
-  }
-  
-  
-  
-  #about {
-    grid-area: about;
-  }
-  
-  #projects {
-    grid-area: projects;
-  }
-  
-  #education {
-    grid-area: education;
-  }
-  
-  #references {
-    grid-area: references;
-  }
-  
-  
+#skills {
+  padding-bottom: 10%;
+  background-color: bisque;
+}
+
+#skills > h1 {
+  padding-top: 10%;
+  padding-left: 10%;
+  font-style: italic;
+}
+
+#skills > ul {
+  padding-top: 5%;
+  padding-left: 15%;
+}
+
+#skills > ul > li {
+  padding-top: 1%;
+}
+
+#projects {
+  padding-top: 30vh;
+  background-color: white;
+}
