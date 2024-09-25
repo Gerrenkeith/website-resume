@@ -52,12 +52,12 @@ html {
 }
 
 #profile > img {
-    width: 530px;
-    height: 540px;
+    width: 490px;
+    height: 510px;
     border-radius: 50%;
     border: 20px solid white;
     position: absolute;
-    bottom: -270px;
+    bottom: -260px;
     left: 70px;
   }
   
@@ -99,4 +99,12 @@ html {
 #projects {
   padding-top: 30vh;
   background-color: white;
+}
+
+@media (max-width: 500px){
+  #profile > img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto
+  }
 }
